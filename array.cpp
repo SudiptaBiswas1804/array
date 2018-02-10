@@ -7,7 +7,7 @@ int arr[n];
 cout<<"enter the size of the array "<<endl;
 cin>>n;
 cout<<"enter the array elements"<<endl;
-for(i=0; i<=n-1; i++) {
+for(i=0; i<=n-1; i++) {                 //or i<n
 cin>>arr[i];
 }
 cout<<"the array elements are "<<endl;
