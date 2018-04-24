@@ -2,14 +2,14 @@
 using namespace std;
 
 int main(){
-	int i,j,n,n3,sum=0;
-	n3=n+n;
+	int i,j,n,m,sum=0;
+	
 	int arr[n];
 	cin>>n;
-	for(i=0; i<=n-1; i++){
+	for(i=0; i<n; i++){
 		cin>>arr[i];
 	}
-	for(i=0; i<=n-1; i++){
+	for(i=0; i<n; i++){
             	cout<<arr[i]<<" ";
             }
             
@@ -36,23 +36,27 @@ int main(){
 	}
 	
 	//Merging two arrays
-	int b[n];
-	int c[n3];
-	for(i=0; i<n; i++){
+	int b[m];
+	cin>>m;
+	int c[m+n];
+	for(i=0; i<m; i++){
 		cin>>b[i];
 	}
 	cout<<endl;
-	for(i=0; i<n; i++){
+	for(i=0; i<m; i++){
 		cout<<b[i]<<" ";
 	}
-	for(i=0; i<n; i++){
+            for(i=0; i<n; i++){
 		c[i]=arr[i];
-		c[i+n]=b[i];
+            	
+            }
+		for(i=0;i<m;i++)
+	 {	c[i+n]=b[i];
 	}
 	cout<<endl;
-	for(i=0; i<n3; i++){
+	for(i=0; i<(m+n); i++){
 		cout<<c[i]<<" ";
 	}
-	
+
            	return 0;
 }
